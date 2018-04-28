@@ -7,7 +7,7 @@ From:ubuntu:latest
 
 %labels
 Maintainer Matthew Andres Moreno
-Version 0.0.0
+Version 0.1.0
 
 ################################################################################
 # Copy any necessary files into the container
