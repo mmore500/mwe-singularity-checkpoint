@@ -13,7 +13,7 @@ Version 0.1.0
 # Copy any necessary files into the container
 ################################################################################
 %files
-. /opt/mwe-singularity-criu
+. /opt/mwe-singularity-checkpoint
 
 %post
 ################################################################################
@@ -21,8 +21,15 @@ Version 0.1.0
 ################################################################################
 apt-get update
 
-apt-get install -y criu
-apt-get install -y htop
+apt-get install -y git
+apt-get install -y build-essential
+apt-get install -y make
+apt-get install -y figlet
+git clone https://github.com/mmore500/dmtcp
+cd dmtcp
+git checkout b8be8be2874258d2f45324a42d609c0c63da0079 .
+./configure && make && make install
+cd ..
 
 chmod 777 -R /opt
 
@@ -30,4 +37,4 @@ chmod 777 -R /opt
 # Run the user's login shell, or a user specified command
 ################################################################################
 %runscript
-/opt/mwe-singularity-criu/test.sh
+/opt/mwe-singularity-checkpoint/demonstrate.sh
