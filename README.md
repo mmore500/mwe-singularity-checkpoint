@@ -1,5 +1,6 @@
 # mwe-singularity-checkpoint
 
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/2039)
 [![CircleCI](https://circleci.com/gh/mmore500/mwe-singularity-checkpoint.svg?style=svg)](https://circleci.com/gh/mmore500/mwe-singularity-checkpoint)
 
 A minimal working example of DMTCP checkpoint-restart inside a Singularity container.
