@@ -41,10 +41,9 @@ This example uses [Singularity](https://github.com/sylabs/singularity) `v2.6.x` 
 I didn't play around with other versions of these softwares.
 
 Unfortunately, this example doesn't seem to be totally portable.
-I was able to get the example to run on my own laptop
-In order to get the checkpoint/restarts to work on CircleCI's virtual machines (i.e., `machine`), I had to disable a runtime assert in the source (see [here](https://github.com/mmore500/dmtcp/commit/b8be8be2874258d2f45324a42d609c0c63da0079)).
-On a [Michigan State University High Performance Computing Center](2.5.2-dist
-) development node, which runs CentOS 7 and uses Singularity `v2.5.2-dist`, the demonstration currently crashes out at the first attempted checkpoint.
+I was able to get the example to run on my own laptop just fine.
+In order to get Singularity checkpoint/restart to work on CircleCI's virtual machines (i.e., `machine`), I had to disable a runtime assert in the source for DMTCP (see [here](https://github.com/mmore500/dmtcp/commit/b8be8be2874258d2f45324a42d609c0c63da0079)).
+On a [Michigan State University High Performance Computing Center](https://icer.msu.edu/) development node, which runs CentOS 7 and uses Singularity `v2.5.2-dist`, the demonstration currently crashes out at the first attempted checkpoint.
 The iCER staff put together a nice tutorial of DMTCP checkpointing on the HPCC [here](https://wiki.hpcc.msu.edu/display/ITH/Check+Point+with+DMTCP).
 With some further finessing along those lines, checkpointing Singularity containers on our HPCC *might* be possible.
 
